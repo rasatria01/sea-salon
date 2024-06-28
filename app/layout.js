@@ -1,7 +1,10 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-
+import NavItem from "@/components/navbar/navitem";
+import logo from "@/public/seasalon.svg"
+import Image from "next/image";
 const inter = Inter({ subsets: ["latin"] });
+
 
 export const metadata = {
   title: "Create Next App",
@@ -9,9 +12,34 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const links = [
+    { label: 'Home', path: '#home' },
+    { label: 'Membership', path: '#product' },
+    { label: 'About', path: '#' },
+    { label: 'Workout', path: '#' },
+    { label: 'Schedule', path: '#' },
+    { label: 'Login', path: '#' },
+  ]
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <header className="flex  items-center justify-between h-16 w-screen bg-[#F43E43] px-12  sticky top-0 left-0 overflow-hidden">
+          <Image
+            src={logo}
+            height={60}
+            width={180}
+            alt="logo"
+          />
+          <div >
+            <div className='flex items-center justify-end h-8 px-6 gap-2'>
+              {links.map((l, i) =>
+                <NavItem key={i} {...l} />
+              )}
+            </div>
+          </div>
+        </header>
+        {children}
+      </body>
     </html>
   );
 }
