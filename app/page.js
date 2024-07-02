@@ -27,7 +27,7 @@ export default function Home() {
         </div>
       </section>
       <section className="h-[92vh]  relative w-full"></section>
-    
+      <Review />
       
     </main>
   );
