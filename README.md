@@ -6,7 +6,7 @@ This project requires Node.js and npm to run.
 
 Prerequisites:
 
-* Node.js (version [minimum required version] or later) - https://nodejs.org/en/download/package-manager
+* Node.js (version Node.js 18.17 or later) - https://nodejs.org/en/download/package-manager
 Installation:
 
 1. Install Node.js: Follow the instructions on the official Node.js website to download and install the latest stable version for your operating system.
@@ -20,12 +20,7 @@ Then, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
